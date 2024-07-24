@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;500&display=swap');
 
+/*////////////////////////////////
+TABLE OF CONTENTS
+1. GLOBAL STYLES
+2. TYPOGRAPHY
+3. LAYOUT
+    3.1 Reusables
+            TV Article
+    3.2 Other
+4. AREAS
+    4.1 Verkoop overzicht
+    4.2 Best verkochte TV
+////////////////////////////////*/
+
+/*//////////////// 1. GLOBAL STYLES ////////////////*/
+
 :root {
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -8,7 +23,178 @@
   -webkit-text-size-adjust: 100%;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Zen Kaku Gothic New', Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
 }
+
+/* //////////////// 2. TYPOGRAPHY ////////////////*/
+
+h1 {
+  font-size: 40px;
+}
+
+h2, .tv-price, .number-statistics {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+button {
+  font-family: 'Zen Kaku Gothic New', Avenir, Helvetica, Arial, sans-serif;
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+/*//////////////// 3. LAYOUT ////////////////*/
+
+/* //// 3.1 Reusables ////*/
+.outer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.inner-container {
+  flex-basis: 1200px;
+  margin: 0 20px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* TV article */
+.tv-article {
+  background-color: #EEEEEE;
+  border: 1px dashed black;
+  border-radius: 5px;
+  margin: 20px 0;
+  padding: 30px;
+
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: stretch;
+}
+
+.img-wrapper-tv {
+  flex-basis: 250px;
+}
+
+.tv-props {
+  flex-basis: 800px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tv-options {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.tv-options li {
+  flex-basis: min-content;
+
+  display: flex;
+  gap: 5px;
+}
+
+.icon-wrapper {
+  flex: 0 0 12px;
+}
+
+/* //// 3.2 Other ////*/
+
+img {
+  width: 100%;
+}
+
+button {
+  background-color: dodgerblue;
+  border: 1px solid dodgerblue;
+  border-radius: 18px;
+  padding: 8px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/*//////////////// 4. AREAS ////////////////*/
+
+h1 {
+  margin: 30px 0;
+}
+
+/*//// 4.1 Verkoop overzicht ////*/
+
+.block-wrapper {
+  margin: 20px 0;
+
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.block {
+  flex: 1 0 210px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sold-tvs {
+  color: hsl(145, 60%, 40%);
+  background-color: hsl(145, 60%, 95%);
+  border: 1px solid hsl(145, 60%, 40%);
+}
+
+.original-stock {
+  color: hsl(210, 80%, 40%);
+  background-color: hsl(210, 80%, 95%);
+  border: 1px solid hsl(210, 80%, 40%);
+}
+
+.current-stock {
+  color: hsl(15, 100%, 50%);
+  background-color: hsl(15, 100%, 95%);
+  border: 1px solid hsl(15, 100%, 50%);
+}
+
+/*//// 4.2 Best verkochte TV ////*/
+
+
+/*//// 4.3 Alle Tvs ////*/
+.list-brands {
+  margin: 20px 0;
+
+  display: flex;
+  gap: 20px;
+}
+
+.button-wrapper {
+  margin: 20px 0;
+
+  display: flex;
+  gap: 10px;
+}
+

@@ -1,6 +1,6 @@
 import {inventory} from "../constants/inventory.js";
 
-function getOriginalStock() {
+function calculateNOriginalStock() {
     let bought = 0;
     for (const tv of inventory) {
         bought += tv.originalStock;
@@ -8,4 +8,4 @@ function getOriginalStock() {
     return bought;
 }
 
-export default getOriginalStock;
+export default calculateNOriginalStock;

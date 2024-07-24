@@ -1,8 +1,8 @@
-import getOriginalStock from "./getOriginalStock.js";
-import getSoldTVs from "./getSoldTVs.js";
+import calculateNOriginalStock from "./calculateNOriginalStock.js";
+import calculateNSoldTVs from "./calculateNSoldTVs.js";
 
-function getCurrentStock() {
-    return (getOriginalStock() - getSoldTVs());
+function calculateNCurrentStock() {
+    return (calculateNOriginalStock() - calculateNSoldTVs());
 }
 
-export default getCurrentStock;
+export default calculateNCurrentStock;

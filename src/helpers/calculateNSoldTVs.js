@@ -1,6 +1,6 @@
 import {inventory} from "../constants/inventory.js";
 
-function getSoldTVs() {
+function calculateNSoldTVs() {
     let sold = 0;
     for (const tv of inventory) {
         sold += tv.sold;
@@ -8,4 +8,4 @@ function getSoldTVs() {
     return sold;
 }
 
-export default getSoldTVs;
+export default calculateNSoldTVs;
