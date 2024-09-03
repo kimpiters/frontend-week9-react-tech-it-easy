@@ -1,22 +1,22 @@
 import './App.css';
-import calculateNSoldTVs from "./helpers/calculateNSoldTVs.js";
-import calculateNOriginalStock from "./helpers/calculateNOriginalStock.js";
-import calculateNCurrentStock from "./helpers/calculateNCurrentStock.js";
+import calculateNSoldTVs from "./helpers/calculateSellingNumbers/calculateNSoldTVs.js";
+import calculateNOriginalStock from "./helpers/calculateSellingNumbers/calculateNOriginalStock.js";
+import calculateNCurrentStock from "./helpers/calculateSellingNumbers/calculateNCurrentStock.js";
 import GenerateListBrands from "./helpers/GenerateListBrands.jsx";
-import GenerateTvArticle from "./helpers/GenerateTvArticle.jsx";
-import sortOnMostSold from "./helpers/sortOnMostSold.js";
+import GenerateTvArticle from "./helpers/generateTVArticle/GenerateTvArticle.jsx";
+import sortOnMostSold from "./helpers/sortAllTVs/sortOnMostSold.js";
 
 import {bestSellingTv} from "./constants/inventory.js";
 import GenerateAllTvs from "./helpers/GenerateAllTvs.jsx";
-import sortOnLowestPrice from "./helpers/sortOnLowestPrice.js";
-import sortOnHighestRefreshRate from "./helpers/sortOnHighestRefreshRate.js";
-import sortOnHighestScreenSize from "./helpers/sortOnHighestScreenSize.js";
+import sortOnLowestPrice from "./helpers/sortAllTVs/sortOnLowestPrice.js";
+import sortOnHighestRefreshRate from "./helpers/sortAllTVs/sortOnHighestRefreshRate.js";
+import sortOnHighestScreenSize from "./helpers/sortAllTVs/sortOnHighestScreenSize.js";
 
 function App() {
     return (
         <>
-            <section className="outer-container">
-                <div className="inner-container">
+            <div className="outer-container">
+                <section className="inner-container">
                     <h1>Tech it easy dashboard</h1>
 
                     <h2>Verkoopoverzicht</h2>
@@ -36,10 +36,14 @@ function App() {
                     </div>
 
                     <h2>Best verkochte tv</h2>
-                    <article className="tv-article">
+                    <article className="tv-article tv-article-best-selling">
                         {GenerateTvArticle(bestSellingTv)}
                     </article>
+                </section>
+            </div>
 
+            <div className="outer-container">
+                <section className="inner-container">
                     <h2>Alle tv&apos;s</h2>
                     <ul className="list-brands"><GenerateListBrands /></ul>
 
@@ -54,12 +58,12 @@ function App() {
                         <button type="button" id="button-highest-screen-size-first" onClick={sortOnHighestScreenSize}>Grootste schermgroottes eerst</button>
                     </div>
 
-                    <section>
+                    <div>
                         <GenerateAllTvs />
-                    </section>
+                    </div>
 
-                </div>
-            </section>
+                </section>
+            </div>
         </>
     )
 }

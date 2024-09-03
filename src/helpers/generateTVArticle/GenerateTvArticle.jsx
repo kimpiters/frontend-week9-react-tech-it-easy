@@ -1,9 +1,9 @@
 import generateNameTV from "./generateNameTV.js";
 import generatePriceTV from "./generatePriceTV.js";
 import generateStringScreenSizes from "./generateStringScreenSizes.js";
-import GenerateListTvOptions from "./GenerateListTvOptions.jsx";
+import GenerateListTvOptions from "../GenerateListTvOptions.jsx";
 
-import outOfStock from "../assets/out-of-stock.png";
+import outOfStock from "../../assets/out-of-stock.png";
 
 function GenerateTvArticle(tv) {
     if (tv.originalStock === tv.sold) {

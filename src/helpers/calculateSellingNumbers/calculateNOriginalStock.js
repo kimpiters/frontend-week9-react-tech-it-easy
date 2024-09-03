@@ -1,4 +1,4 @@
-import {bestSellingTv, inventory} from "../constants/inventory.js";
+import {bestSellingTv, inventory} from "../../constants/inventory.js";
 
 function calculateNOriginalStock() {
     let bought = 0;

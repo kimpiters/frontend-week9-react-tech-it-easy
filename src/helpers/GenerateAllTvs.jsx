@@ -1,5 +1,5 @@
 import {inventory} from "../constants/inventory.js";
-import GenerateTvArticle from "./GenerateTvArticle.jsx";
+import GenerateTvArticle from "./generateTVArticle/GenerateTvArticle.jsx";
 
 function GenerateAllTvs() {
     let allTvs = [];
