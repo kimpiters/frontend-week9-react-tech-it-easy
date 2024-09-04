@@ -1,3 +1,4 @@
+// part 2
 import {inventory} from "../../constants/inventory.js";
 
 function sortOnHighestRefreshRate() {

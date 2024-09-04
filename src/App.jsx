@@ -1,3 +1,4 @@
+// Updated for part 2
 import './App.css';
 import calculateNSoldTVs from "./helpers/calculateSellingNumbers/calculateNSoldTVs.js";
 import calculateNOriginalStock from "./helpers/calculateSellingNumbers/calculateNOriginalStock.js";

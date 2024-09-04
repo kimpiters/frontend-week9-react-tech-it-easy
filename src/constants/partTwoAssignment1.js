@@ -1,3 +1,4 @@
+// part 2
 import {inventory} from "./inventory.js";
 
 //////////////// View in terminal: ///////////////

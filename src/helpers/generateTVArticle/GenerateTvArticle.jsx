@@ -1,3 +1,4 @@
+// Updated for part 2
 import generateNameTV from "./generateNameTV.js";
 import generatePriceTV from "./generatePriceTV.js";
 import generateStringScreenSizes from "./generateStringScreenSizes.js";
