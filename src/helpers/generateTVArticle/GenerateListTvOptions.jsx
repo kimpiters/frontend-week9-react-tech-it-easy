@@ -1,5 +1,5 @@
-import checkIcon from "../assets/check.png";
-import notIcon from "../assets/minus.png";
+import checkIcon from "../../assets/check.png";
+import notIcon from "../../assets/minus.png";
 
 function GenerateListTvOptions(tv) {
     let listTvOptions = [];
