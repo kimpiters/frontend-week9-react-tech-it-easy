@@ -8,70 +8,67 @@ import {inventory} from "./inventory.js";
 
 // 1a
 console.log("---------------- 1a ----------------");
-let tvTypes = [];
-for (const tv of inventory) {
-    tvTypes.push(tv.type);
-}
+
+const tvTypes = inventory.map((tv) => {
+    return tv.type;
+});
+
 console.log(tvTypes);
 console.log();
 
 // 1b
 console.log("---------------- 1b ----------------");
-let soldOutTvs = [];
-for (const tv of inventory) {
-    if (tv.originalStock - tv.sold === 0) {
-        soldOutTvs.push(tv);
-    }
-}
+
+const soldOutTvs = inventory.filter((tv) => {
+    return (tv.originalStock - tv.sold === 0);
+});
+
 console.log(soldOutTvs);
 console.log();
 
 // 1c
 console.log("---------------- 1c ----------------");
-for (let tv of inventory) {
-    if (tv.type === "NH3216SMART") {
-        console.log(tv);
-    }
-}
+
+const chosenTV = inventory.find((tv) => {
+    return (tv.type === "NH3216SMART")
+})
+
+console.log(chosenTV);
 console.log();
 
 // 1d
 console.log("---------------- 1d ----------------");
-let sportTvs = [];
-for (const tv of inventory) {
-    let sportTv = {};
-    sportTv.name = `${tv.brand} ${tv.name}`;
-    sportTv.suitable = tv.refreshRate >= 100;
-    sportTvs.push(sportTv);
-}
-console.log(sportTvs);
+
+const sportTVs = inventory.map((tv) => {
+    return {
+        name: `${tv.brand} ${tv.name}`,
+        suitable: tv.refreshRate >= 100
+    }
+})
+
+console.log(sportTVs);
 console.log();
 
 // 1e
 console.log("---------------- 1e ----------------");
-let tvsOver65 = [];
-for (const tv of inventory) {
-    for (const size of tv.availableSizes) {
-        if (size >= 65) {
-            tvsOver65.push(tv);
-            break;
-        }
-    }
-}
+
+const tvsOver65 = inventory.filter((tv) => {
+    return (tv.availableSizes.find((size) => {
+        return (size >= 65);
+    }))
+})
+
 console.log(tvsOver65);
 console.log();
 
 // 1f
 console.log("---------------- 1f ----------------");
-let tvsAmbiLight = [];
-for (const tv of inventory) {
-    for (const option of tv.options) {
-        if (option.name === "ambiLight") {
-            if (option.applicable === true) {
-                tvsAmbiLight.push(tv);
-            }
-        }
-    }
-}
+
+const tvsAmbiLight = inventory.filter((tv) => {
+    return (tv.options.find((option) => {
+        return (option.name === "ambiLight" && option.applicable === true)
+    }))
+});
+
 console.log(tvsAmbiLight);
 console.log();
